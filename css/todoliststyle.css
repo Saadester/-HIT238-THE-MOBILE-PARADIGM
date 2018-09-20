@@ -22,11 +22,6 @@ header {
   border-bottom-right-radius: 60px;
   border-bottom-left-radius: 10px;
 }
-label {
-  padding-left:10%;
-  color: #00FF00;
-  text-align: center;
-}
 
 header input {
   width: 100%;
@@ -60,7 +55,11 @@ header input::-moz-input-placeholder {
 header input:-ms-input-placeholder {
   color: rgba(255, 255, 255, 0.75);
 }
-
+label {
+  padding-left:10%;
+  color: #00FF00;
+  text-align: center;
+}
 header button {
   width: 50px;
   height: 55px;
