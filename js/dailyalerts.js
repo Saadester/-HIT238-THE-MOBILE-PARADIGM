@@ -127,4 +127,29 @@ document.addEventListener('DOMContentLoaded', () => {
              }
            }
          });
-         
+         // Clear list items on screen
+clearButton.addEventListener('click', (e) => {
+  ul.innerHTML = '';
+  // Clear items on local storage array
+  itemsArray = [];
+  setLocalStorage('items', itemsArray);
+})
+
+// Apply a class on checked list items
+ul.addEventListener('change', (e) => {
+  const li = e.target.parentNode;
+  const liItemName = e.target.nextElementSibling.textContent;
+  if (e.target.checked) {
+    li.className = 'checked';
+    checkedArray.push(liItemName);
+    setLocalStorage('checked', checkedArray);
+  } else {
+    li.className = '';
+    for (let i = 0; i < checkedArray.length; i++) {
+      if (liItemName === checkedArray[i]) {
+        checkedArray.splice(i, 1);
+        setLocalStorage('checked', checkedArray);
+      }
+    }
+  }
+});
