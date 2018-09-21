@@ -81,3 +81,13 @@ document.addEventListener('DOMContentLoaded', () => {
           errorMessage.textContent = '';
         }
       });
+
+        // Generate list item and append onto list
+        const createListContent = text => {
+          const span = document.createElement('span');
+          const li = document.createElement('li');
+          span.textContent = text;
+          li.appendChild(span);
+          ul.appendChild(li);
+          createButtons(li);
+        }
