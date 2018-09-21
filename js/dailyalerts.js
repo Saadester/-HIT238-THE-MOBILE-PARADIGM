@@ -52,3 +52,19 @@ document.addEventListener('DOMContentLoaded', () => {
      } else {
        itemsArray = JSON.parse(localStorage.getItem('items'));
      }
+     // Create an array for checked list items to be stored for local storage
+     let checkedArray;
+     if (localStorage.getItem('checked') === null) {
+       checkedArray = [];
+     } else {
+       checkedArray = JSON.parse(localStorage.getItem('checked'));
+     }
+
+     // Creates error message for when the input is empty
+     const errorMessage = document.createElement('p');
+     mainForm.appendChild(errorMessage);
+
+     // Function to set list items to local storage
+     const setLocalStorage = (key, array) => {
+       return localStorage.setItem(key, JSON.stringify(array));
+     }
