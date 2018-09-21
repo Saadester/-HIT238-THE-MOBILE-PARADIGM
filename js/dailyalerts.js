@@ -44,3 +44,11 @@ document.addEventListener('DOMContentLoaded', () => {
      displayClock();
      setInterval(displayClock, 1000)
    }
+
+     // Create an array for list items to be stored for local storage
+     let itemsArray;
+     if (localStorage.getItem('items') === null) {
+       itemsArray = [];
+     } else {
+       itemsArray = JSON.parse(localStorage.getItem('items'));
+     }
