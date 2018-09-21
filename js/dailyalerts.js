@@ -153,3 +153,16 @@ ul.addEventListener('change', (e) => {
     }
   }
 });
+// Loop through local storage to create list items and display on page on refresh
+ for (let i = 0; i < itemsArray.length; i++) {
+   createListContent(itemsArray[i]);
+   for (let j = 0; j < checkedArray.length; j++) {
+     if (itemsArray[i] === checkedArray[j]) {
+       const localStorageLi = ul.getElementsByTagName('LI')[i];
+       const localStorageCheckbox = localStorageLi.querySelector('input');
+       localStorageLi.className = 'checked';
+       localStorageCheckbox.checked = true;
+     }
+   }
+ }
+});
