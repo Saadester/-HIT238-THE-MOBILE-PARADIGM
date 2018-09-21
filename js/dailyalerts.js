@@ -91,3 +91,40 @@ document.addEventListener('DOMContentLoaded', () => {
           ul.appendChild(li);
           createButtons(li);
         }
+
+         //Create and attach buttons onto list items
+         const createButtons = li => {
+           const listItem = li.firstElementChild;
+           const checkbox = document.createElement('input');
+           checkbox.type = 'checkbox';
+           li.insertBefore(checkbox, listItem);
+
+           const removeButton = document.createElement('button');
+           removeButton.textContent = 'x';
+           removeButton.className = 'remove';
+           li.insertBefore(removeButton, listItem.nextElementSibling);
+         }
+
+         // Give functionality to the delete button
+         ul.addEventListener('click', (e) => {
+           if (e.target.className === 'remove') {
+             const li = e.target.parentNode;
+             const liItemName = e.target.previousSibling.textContent;
+             ul.removeChild(li);
+
+             for (let i = 0; i < itemsArray.length; i++) {
+               if (liItemName === itemsArray[i]) {
+                 itemsArray.splice(i, 1);
+                 setLocalStorage('items', itemsArray);
+               }
+             }
+
+             for (let i = 0; i < checkedArray.length; i++) {
+                if (liItemName === checkedArray[i]) {
+                 checkedArray.splice(i, 1);
+                 setLocalStorage('checked', checkedArray);
+               }
+             }
+           }
+         });
+         
