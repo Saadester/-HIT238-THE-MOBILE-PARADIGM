@@ -21,7 +21,7 @@ header {
   margin-bottom: 30px;
 }
 
-#clock {
+.clock {
   font-weight: normal;
   font-size: 60px;
   color: #EFF6E0;
@@ -30,14 +30,14 @@ header {
   font-size: 100px;
 }
 
-#date {
+.date {
   color: #EFF6E0;
   font-size: 80px;
   padding-bottom: 9px;
   border-bottom: 1px solid;
 }
 
-#main-form {
+.main-form {
   margin: auto;
   margin-top: 20px;
   color: rgb(209, 60, 60);
@@ -72,7 +72,7 @@ form button {
   padding-left: 15px;
 }
 
-#clear-button {
+.clear-button {
   float: right;
   margin-bottom: 0;
   font-weight: bold;
@@ -83,7 +83,7 @@ form button {
 	font-size:50px;
 	color: white;
 }
-#clear-button:hover {
+.clear-button:hover {
   cursor: pointer;
 }
 
