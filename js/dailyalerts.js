@@ -68,3 +68,16 @@ document.addEventListener('DOMContentLoaded', () => {
      const setLocalStorage = (key, array) => {
        return localStorage.setItem(key, JSON.stringify(array));
      }
+     // Submit task into input field
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        if (input.value === '') {
+          errorMessage.textContent = 'Please enter a task';
+        } else {
+          itemsArray.push(input.value);
+          setLocalStorage('items', itemsArray);
+          createListContent(input.value);
+          input.value = '';
+          errorMessage.textContent = '';
+        }
+      });
