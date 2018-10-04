@@ -60,3 +60,36 @@ body {
      margin-bottom: 10px;
    }
  }
+ .notes #notes-list li div {
+   display: block;
+   height: 329px;
+   -moz-transition: -moz-transform .15s linear;
+   -webkit-transition: -webkit-transform .15s linear;
+   text-align: center;
+   border-radius: 10px;
+ }
+ .notes #notes-list li div .time {
+   font-size: 12px;
+   margin: 0;
+   padding: 10px;
+   padding-right: 20px;
+   float: right;
+   color: black;
+   font-style: italic;
+ }
+ .notes #notes-list li div .note-title {
+   width: 90%;
+   height: 45px;
+   border: none;
+   resize: none;
+   font-size: 20px;
+   padding: 10px;
+   text-align: center;
+ }
+ .notes #notes-list li div .note-content {
+   width: 90%;
+   height: 202px;
+   resize: none;
+   border: none;
+   font-size: 16px;
+ }
