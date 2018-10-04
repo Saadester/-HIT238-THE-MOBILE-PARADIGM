@@ -50,3 +50,13 @@ body {
    position: relative;
    width: 30%;
  }
+ @media screen and (max-width: 900px) {
+   .notes #notes-list li {
+     width: 71%;
+     text-align: center;
+     margin: 0 auto;
+     float: none;
+     position: relative;
+     margin-bottom: 10px;
+   }
+ }
