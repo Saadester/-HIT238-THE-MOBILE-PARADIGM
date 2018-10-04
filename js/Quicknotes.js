@@ -1,5 +1,4 @@
-
-			// Assigning functions its classes and id's
+// Assigning functions its classes and id's
 
 (function() {
 	var  notes, count = 0;
