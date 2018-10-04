@@ -41,3 +41,44 @@
         var time = date.getFullYear() + "-" + (date.getMonth() + 1) + "-" + date.getDate() + " " +  (date.getHours() - 4) + ":" + date.getMinutes() + ":" + date.getSeconds();
       }
     }
+    //Setting up local storage for save,delete and add notes
+
+
+      notes.append("<li><div class='" + className + "'><i class='icon-check'>  Save</i><p class='time'>" + time + "</p>" + "<textarea class='note-title' placeholder='Enter a title...' maxlength='50'/>" + "<textarea class='note-content' placeholder='Start a note...'/>" + "<i class='icon-cancel hide'> Delete</i>" + "</div></li>");
+
+      var newNote = notes.find("li:last");
+      newNote.find(".icon-cancel").on('click', function(){
+          newNote.remove();
+          _private.saveNotes();
+      });
+      newNote.find(".icon-check").on('click', function(){
+        _private.saveNotes();
+        $("body").fadeIn(175).fadeOut(175).fadeIn(175)
+      })
+
+      _private.attachNoteEvent(newNote);
+
+      if (title) {
+        newNote.find("textarea.note-title").val(title);
+        }
+
+      if (content) {
+        newNote.find("textarea.note-content").val(content);
+        }
+        if (time){
+          newNote.find(".time").text();
+        }
+
+        _private.saveNotes();
+      },
+   saveNotes: function() {
+      var notesArray = [];
+
+      notes.find("li > div").each(function (i, e) {
+          var c = $(e).attr("class");
+          var title = $(e).find("textarea.note-title");
+          var content = $(e).find("textarea.note-content");
+          var time = $(e).find('.time').text();
+
+          notesArray.push({ Index: i, Title: title.val(), Content: content.val(), Class: c, Time: time });
+      });
