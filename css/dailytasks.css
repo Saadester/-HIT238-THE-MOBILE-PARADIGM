@@ -24,14 +24,14 @@ header {
 .clock {
   font-weight: normal;
   font-size: 60px;
-  color: #EFF6E0;
+  color: #000080;
   margin-bottom: 0;
   height:200px;
   font-size: 100px;
 }
 
 .date {
-  color: #EFF6E0;
+  color: #000080;
   font-size: 80px;
   padding-bottom: 9px;
   border-bottom: 1px solid;
@@ -58,13 +58,13 @@ form input[type="text"] {
   border: none;
   border-radius: 5px 0 0 5px;
   flex: 90%;
-  background: #EFF6E0;
+  background: #edf0f1;
 }
 
 form button {
   border-radius: 0 5px 5px 0;
   border: none;
-  background: #EFF6E0;
+  background: #edf0f1;
   color: #BEBEBE;
   font-size: 1.4em;
   font-weight: bold;
@@ -81,7 +81,7 @@ form button {
 .mainhead {
 	text-align:center;
 	font-size:50px;
-	color: white;
+	color: #000080;
 }
 .clear-button:hover {
   cursor: pointer;
@@ -206,6 +206,7 @@ form button:hover,
 }
 .labeltop {
 	Font-size: 55px;
+  color:#00c41e;
 }
 .myButton:hover {
 	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #415989), color-stop(1, #2e466e));
