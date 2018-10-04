@@ -40,3 +40,13 @@ body {
    -o-transition: all 500ms;
    transition: all  500ms;
  }
+ .notes ul#create-new-note .medium.btn.primary:hover {
+   background-color: #219821;
+   border-color: #219821;
+ }
+ .notes #notes-list li {
+   margin: 15px;
+   float: left;
+   position: relative;
+   width: 30%;
+ }
