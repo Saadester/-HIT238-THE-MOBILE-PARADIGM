@@ -82,3 +82,25 @@
 
           notesArray.push({ Index: i, Title: title.val(), Content: content.val(), Class: c, Time: time });
       });
+      // If notes more than 0, Function load notes from local storage
+
+      		    var jsonStr = JSON.stringify(notesArray);
+
+      		    localStorage.setItem("notes", jsonStr);
+      		},
+              loadNotes: function() {
+      		    var localNotes = localStorage.getItem("notes");
+      		    if ( localNotes ) {
+      		        var notesList = JSON.parse(localNotes);
+      		  		count = notesList.length;
+      		        var i;
+      		        for (i = 0; i < count; i++) {
+      		            var storedNote = notesList[i];
+      		            _private.addNewNote(storedNote.Class, storedNote.Title, storedNote.Content, storedNote.Time);
+      		        }
+      		        $('#controls strong').hide();
+      		        $('#welcome').html('Quick Notes')
+      		    }
+      		}
+          };
+      						
