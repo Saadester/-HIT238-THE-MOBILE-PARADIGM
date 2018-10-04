@@ -30,4 +30,14 @@
 		        closeImg.addClass("hide");
 		    });
 		},
-		
+
+      // Adding the time and date on top of notes ( the time and date note was created )
+
+    addNewNote: function(className, title, content, time) {
+  if (!className) {
+      className = "c-" + Math.ceil(Math.random() * 3);
+      if(!time) {
+        var date = new Date();
+        var time = date.getFullYear() + "-" + (date.getMonth() + 1) + "-" + date.getDate() + " " +  (date.getHours() - 4) + ":" + date.getMinutes() + ":" + date.getSeconds();
+      }
+    }
