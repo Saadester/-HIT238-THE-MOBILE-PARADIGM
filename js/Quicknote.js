@@ -30,8 +30,8 @@ function addNoteScreen() {
   elString += '<div id="add-note-screen">';
   elString += '<h1>Add New Note</h1>';
   elString += '<textarea id="new-note-content" autofocus></textarea>';
-  elString += '<button id="insert-space">Insert Space</button>';
-  elString += '<button id="insert-questionmark">Insert ?</button>';
+  elString += '<button id="insert-gymtraining">Gym Exercises</button>';
+  elString += '<button id="insert-glossarylist">Glossary List</button>';
   elString += '<button id="submit-new-note">Add Note</button>';
   elString += '</div>';
 
@@ -45,12 +45,12 @@ function addNoteScreen() {
   document.querySelector("#add-note-btn").addEventListener("click", removeNoteScreen, false);
 
   // Event listener for Space and ? adding
-  document.querySelector("#insert-space").addEventListener("click", function(){
-    typeInTextarea(document.querySelector("textarea"), "  ")
+  document.querySelector("#insert-gymtraining").addEventListener("click", function(){
+    typeInTextarea(document.querySelector("textarea"), "Gym Exercises :       1. ")
   }, false);
 
-  document.querySelector("#insert-questionmark").addEventListener("click", function(){
-    typeInTextarea(document.querySelector("textarea"), "?")
+  document.querySelector("#insert-glossarylist").addEventListener("click", function(){
+    typeInTextarea(document.querySelector("textarea"), "Glossary list :       1. ")
   }, false);
 
   // Eventlistner for Submit new note button and remove buttons
