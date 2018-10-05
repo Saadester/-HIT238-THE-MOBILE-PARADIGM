@@ -34,3 +34,10 @@ function addNoteScreen() {
   elString += '<button id="insert-questionmark">Insert ?</button>';
   elString += '<button id="submit-new-note">Add Note</button>';
   elString += '</div>';
+  // Add the element string created above to the document
+  document.querySelector("body").innerHTML += elString;
+
+  document.querySelector("#add-note-screen").classList.add("note-screen-in");
+  // Adding and removing button
+  document.querySelector("#add-note-btn").removeEventListener("click", addNoteScreen);
+  document.querySelector("#add-note-btn").addEventListener("click", removeNoteScreen, false);
