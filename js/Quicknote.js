@@ -97,3 +97,13 @@ function addNoteToList() {
   saveNoteTxt();
 
 }
+ // Function for saving note in local storage
+function saveNoteTxt(){
+
+  var notes = document.querySelectorAll(".note");
+  var noteObj = {};
+  for(var x = 0; x < notes.length; x++) {
+    noteObj[x] = notes[x].innerHTML;
+  }
+  localStorage.setItem('noteAppStorageObj', JSON.stringify(noteObj));
+}
