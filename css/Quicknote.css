@@ -1,0 +1,10 @@
+/*	Prevent the display from being wider than the browser width, no horizontal scroll 	*/
+
+*,
+*::before,
+*::after {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
