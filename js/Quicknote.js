@@ -46,11 +46,11 @@ function addNoteScreen() {
 
   // Event listener for Space and ? adding
   document.querySelector("#insert-gymtraining").addEventListener("click", function(){
-    typeInTextarea(document.querySelector("textarea"), "Gym Exercises :       1. ")
+    typeInTextarea(document.querySelector("textarea"), "Gym Exercises : ")
   }, false);
 
   document.querySelector("#insert-glossarylist").addEventListener("click", function(){
-    typeInTextarea(document.querySelector("textarea"), "Glossary list :       1. ")
+    typeInTextarea(document.querySelector("textarea"), "Glossary list : ")
   }, false);
 
   // Eventlistner for Submit new note button and remove buttons

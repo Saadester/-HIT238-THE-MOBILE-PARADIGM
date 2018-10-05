@@ -46,7 +46,7 @@ body {
 .top-bar h1 {
   text-align: center;
   line-height: 50px;
-  font-size: 40px;
+  font-size: 30px;
 }
 
 #add-note-btn {
@@ -158,13 +158,13 @@ body {
   background: #000080;
   color: white;
   font-family: monospace;
-  font-size: 24px;
+  font-size: 15px;
 }
 
 #add-note-screen button {
   margin: 10px 10% 0 0;
   cursor: pointer;
-  font-size: 20px;
+  font-size: 11px;
   padding: 10px;
   position: relative;
   top: 0px;
@@ -195,7 +195,7 @@ body {
   color: White;
   min-height: 150px;
   padding: 5px;
-  font-size: 24px;
+  font-size: 17px;
   padding-right: 50px;
   position: relative;
   white-space: pre-wrap;
@@ -231,5 +231,5 @@ body {
   cursor: pointer;
   font-weight: bold;
   text-transform: capitalize;
-  font-size: 30px;
+  font-size: 20px;
 }
