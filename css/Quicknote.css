@@ -8,3 +8,37 @@
   box-sizing: border-box;
   font-family: 'Roboto', sans-serif;
 }
+
+html {
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+body {
+  padding-top: 60px;
+}
+
+@-webkit-keyframes fadeIn {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+@keyframes fadeIn {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+.fade-in {
+  -webkit-animation: fadeIn .5s forwards;
+          animation: fadeIn .5s forwards;
+}
+
+.top-bar {
+  position: fixed;
+  top: 0px;
+  width: 100vw;
+  color: #fff;
+  background: #000080;
+  height: 50px;
+  z-index: 100;
+}
