@@ -88,3 +88,48 @@ body {
   -webkit-animation: twist .5s;
           animation: twist .5s;
 }
+@-webkit-keyframes fade-in-down {
+  0% {
+    opacity: 0;
+    top: -110vh;
+  }
+  100% {
+    opacity: 1;
+    top: 50px;
+  }
+}
+
+@keyframes fade-in-down {
+  0% {
+    opacity: 0;
+    top: -110vh;
+  }
+  100% {
+    opacity: 1;
+    top: 50px;
+  }
+}
+
+.note-screen-in {
+  -webkit-animation: fade-in-down .5s forwards;
+          animation: fade-in-down .5s forwards;
+}
+
+@-webkit-keyframes fade-up-out {
+  0% {opacity:1;
+  top: 50px;}
+  100% {opacity:0;
+  top: -110vh;}
+}
+
+@keyframes fade-up-out {
+  0% {opacity:1;
+  top: 50px;}
+  100% {opacity:0;
+  top: -110vh;}
+}
+
+.note-screen-out {
+  -webkit-animation: fade-up-out .5s forwards;
+          animation: fade-up-out .5s forwards;
+}
