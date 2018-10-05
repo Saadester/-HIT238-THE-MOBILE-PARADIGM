@@ -6,7 +6,7 @@
 
 body {
   font-family: 'Open Sans', sans-serif;
-  background-image: url("main.jpg");
+  background-color: #000080;
   background-size: cover;
 }
 
@@ -24,14 +24,14 @@ header {
 .clock {
   font-weight: normal;
   font-size: 60px;
-  color: #000080;
+  color: White;
   margin-bottom: 0;
   height:200px;
   font-size: 100px;
 }
 
 .date {
-  color: #000080;
+  color: White;
   font-size: 80px;
   padding-bottom: 9px;
   border-bottom: 1px solid;
@@ -81,7 +81,7 @@ form button {
 .mainhead {
 	text-align:center;
 	font-size:50px;
-	color: #000080;
+	color: White;
 }
 .clear-button:hover {
   cursor: pointer;
