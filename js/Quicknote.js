@@ -51,7 +51,7 @@ function addNoteScreen() {
     typeInTextarea(document.querySelector("textarea"), "?")
   }, false);
 
-  // Eventlistner for Submit new note button nad remove buttons
+  // Eventlistner for Submit new note button and remove buttons
   document.querySelector("#submit-new-note").addEventListener("click", addNoteToList, false);
 }
 
@@ -84,3 +84,16 @@ function addNoteToList() {
   if(noteText === "" || noteText === " "){
       return false;
   }
+  // Inserting new contrainer div for the note
+  var container = document.createElement('div');
+  container.className = "note fade-in";
+  var closeBtn = document.createElement('button');
+  closeBtn.textContent = "X";
+  closeBtn.className = "del-note";
+  container.textContent = noteText;
+  container.appendChild(closeBtn);
+  document.querySelector("body").appendChild(container);
+  removeNoteScreen();
+  saveNoteTxt();
+
+}
