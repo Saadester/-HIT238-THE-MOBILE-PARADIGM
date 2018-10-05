@@ -120,3 +120,20 @@ function delNoteBtns(){
     }, false);
   }
 }
+// function to insert text into a textarea
+function typeInTextarea(el, newText) {
+  var start = el.selectionStart;				
+  var end = el.selectionEnd;
+  var text = el.value;
+  // Gets the contents of the textarea before and after the position of the selection/cursor and stores it
+  var before = text.substring(0, start);
+  var after  = text.substring(end, text.length);
+  // Combines the old text with the added content
+  el.value = (before + newText + after);
+  el.selectionStart = el.selectionEnd = start + newText.length;
+  // Focus cursor on textarea
+  el.focus();
+}
+// addNoteScreen function which builds the add new note screen into the window
+document.querySelector("#add-note-btn").addEventListener("click", addNoteScreen, false);
+delNoteBtns();
