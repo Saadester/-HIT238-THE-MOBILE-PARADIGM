@@ -19,3 +19,18 @@ if (savedNotes !== null) {
     document.querySelector("body").innerHTML += newNote;
   }
 }
+// This function creates the add note dialog box
+function addNoteScreen() {
+
+  var elString = "";
+
+  // Animate the plus new note button to turn into an X with the twist class
+  document.querySelector("#add-note-btn").classList.add("twist");
+
+  elString += '<div id="add-note-screen">';
+  elString += '<h1>Add New Note</h1>';
+  elString += '<textarea id="new-note-content" autofocus></textarea>';
+  elString += '<button id="insert-space">Insert Space</button>';
+  elString += '<button id="insert-questionmark">Insert ?</button>';
+  elString += '<button id="submit-new-note">Add Note</button>';
+  elString += '</div>';
