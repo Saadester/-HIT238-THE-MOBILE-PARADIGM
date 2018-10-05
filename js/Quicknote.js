@@ -41,3 +41,12 @@ function addNoteScreen() {
   // Adding and removing button
   document.querySelector("#add-note-btn").removeEventListener("click", addNoteScreen);
   document.querySelector("#add-note-btn").addEventListener("click", removeNoteScreen, false);
+
+  // Event listener for Space and ? adding
+  document.querySelector("#insert-space").addEventListener("click", function(){
+    typeInTextarea(document.querySelector("textarea"), "  ")
+  }, false);
+
+  document.querySelector("#insert-questionmark").addEventListener("click", function(){
+    typeInTextarea(document.querySelector("textarea"), "?")
+  }, false);
