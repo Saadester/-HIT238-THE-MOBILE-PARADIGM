@@ -42,3 +42,20 @@ body {
   height: 50px;
   z-index: 100;
 }
+
+.top-bar h1 {
+  text-align: center;
+  line-height: 50px;
+  font-size: 40px;
+}
+
+#add-note-btn {
+  position: absolute;
+  right: 10px;
+  top: 0px;
+  font-size: 50px;
+  line-height: 50px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: .5s;
+}
