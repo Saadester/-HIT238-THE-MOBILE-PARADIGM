@@ -107,3 +107,16 @@ function saveNoteTxt(){
   }
   localStorage.setItem('noteAppStorageObj', JSON.stringify(noteObj));
 }
+ // Function for deleteing note from local storage
+function delNoteBtns(){
+
+  var els = document.querySelectorAll(".note");
+  for(var x = 0; x < els.length; x++){
+    els[x].addEventListener("click", function(e){
+      if(e.target.className === "del-note"){
+        this.parentElement.removeChild(this);
+        saveNoteTxt();
+      }
+    }, false);
+  }
+}
