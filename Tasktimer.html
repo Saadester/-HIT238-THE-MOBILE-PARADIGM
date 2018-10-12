@@ -3,17 +3,33 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="css/mainpagestyle.css">
+  <link rel="stylesheet" href="css/tasktimer.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
 
-  <title>To do List app/Task Timer</title>
+  <title>Task Timer</title>
 </head>
 <body>
+                                <!-- Head -->
+  <header role="banner">
+      <h1>Task Timer</h1>
+  	<h2>Write down the task below of whom you want to track the time</h2>
+      <form class="project-form">
+          <input type="text" name="project" placeholder="Enter task name">
+          <input type="submit" value="Submit">
+      </form>
+  </header>
 
+                              <!-- Main -->
+  <main role="main">
+      <ul class="projects">
+      </ul>
+  </main>
 
-
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/dompurify/1.0.7/purify.min.js'></script>
+  <script  src="js/tasktimer.js"></script>
 
 </body>
+
 
 
     <a href="index.html" class="myButton" >Home</a>
