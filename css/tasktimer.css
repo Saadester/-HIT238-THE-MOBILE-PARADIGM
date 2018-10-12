@@ -18,6 +18,7 @@ main {
   justify-content: center;
   align-items: center;
 }
+
 @media screen and (min-width: 768px) {
   main {
     padding: 80px 30px;
@@ -32,6 +33,7 @@ header {
   justify-content: center;
   align-items: center;
 }
+
 @media screen and (min-width: 768px) {
   header {
     padding: 80px 30px;
@@ -113,6 +115,7 @@ input[type="submit"]:hover {
     padding: 20px;
   }
 }
+
 .projects {
   list-style: none;
   padding: 0;
@@ -162,6 +165,7 @@ input[type="submit"]:hover {
     justify-content: flex-end;
   }
 }
+
 .timer {
   text-align: center;
   color: #4A4A4A;
@@ -196,6 +200,7 @@ input[type="submit"]:hover {
     font-size: 35px;
   }
 }
+
 .btn {
   padding: 13px;
   width: 120px;
@@ -244,6 +249,7 @@ input[type="submit"]:hover {
   border-color: #D00202;
   border-style: solid;
 }
+
 .delete-btn {
   background: #D00202;
   border-radius: 50%;
@@ -280,5 +286,39 @@ input[type="submit"]:hover {
     right: inherit;
     -webkit-transform: translateX(50px);
             transform: translateX(50px);
+  }
+}
+
+.projects li:hover .delete-btn,
+.projects li:hover .timer,
+.projects li:hover .btn {
+  opacity: 1;
+}
+
+@media screen and (min-width: 768px) {
+  .projects li:hover .delete-btn,
+  .projects li:hover .timer,
+  .projects li:hover .btn {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+.projects input {
+  width: 100%;
+  padding: 0.5rem;
+  font-size: 1.125rem;
+  color: #4A4A4A;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  border: 1px solid #a2a2a2;
+}
+
+@media screen and (min-width: 768px) {
+  .projects input {
+    width: 50%;
+    font-size: 1.313rem;
+    margin-bottom: 0;
+    margin-right: auto;
   }
 }
