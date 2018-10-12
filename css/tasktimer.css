@@ -1,0 +1,20 @@
+body {
+  font-size: 25px;
+  box-sizing: border-box;
+}
+
+p {
+  margin: 0;
+}
+
+button > * {
+  pointer-events: none;
+}
+
+main {
+  padding: 40px 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
