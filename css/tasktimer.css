@@ -244,3 +244,41 @@ input[type="submit"]:hover {
   border-color: #D00202;
   border-style: solid;
 }
+.delete-btn {
+  background: #D00202;
+  border-radius: 50%;
+  width: 42px;
+  height: 42px;
+  border: 2px solid #D00202;
+  opacity: 1;
+  position: absolute;
+  bottom: 25px;
+  right: 30px;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  transition: background 0.3s, opacity 0.3s, -webkit-transform 0.5s;
+  transition: background 0.3s, opacity 0.3s, transform 0.5s;
+  transition: background 0.3s, opacity 0.3s, transform 0.5s, -webkit-transform 0.5s;
+}
+
+.delete-btn i {
+  font-size: 1.5rem;
+}
+
+.delete-btn:hover {
+  color: #D00202;
+  background: transparent;
+}
+
+@media screen and (min-width: 768px) {
+  .delete-btn {
+    opacity: 0;
+    position: relative;
+    bottom: inherit;
+    right: inherit;
+    -webkit-transform: translateX(50px);
+            transform: translateX(50px);
+  }
+}
