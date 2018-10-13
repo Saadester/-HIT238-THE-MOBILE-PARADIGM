@@ -29,3 +29,22 @@ const dataController = (function() {
             return newProject;
 
         },
+                // Update project title in data structure
+                updateTitle: function(newTitle, ID) {
+
+                    const projectToUpdate = projects.allProjects.find(project => project.id === ID);
+
+                    projectToUpdate.title = newTitle;
+
+                },
+
+                // Delete a project from data structure
+                deleteData: function(ID) {
+
+                    const currentProject = projects.allProjects.map(current => current.id);
+                    const index = currentProject.indexOf(ID);
+                    if (index !== -1) {
+                        projects.allProjects.splice(index, 1);
+                    }
+
+                },
