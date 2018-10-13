@@ -48,3 +48,11 @@ const dataController = (function() {
                     }
 
                 },
+                // Testing
+                 testing: function() {
+                     console.log(projects);
+                 }
+
+             };
+
+         })();
