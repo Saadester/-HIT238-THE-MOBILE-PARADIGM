@@ -209,3 +209,22 @@ const dataController = (function() {
                         });
 
                     };
+
+                        // Add new task
+                        const ctrlAddProject = function(event) {
+
+                            event.preventDefault();
+
+                            const dirty = UICtrl.getInput().value;
+                            const clean = DOMPurify.sanitize(dirty);
+
+                            if (clean !== '') {
+
+                                const newProject = dataCtrl.addProject(clean);
+
+                                UICtrl.addProjectToUI(newProject);
+
+                                UICtrl.clearField();
+                            }
+
+                        };
