@@ -56,3 +56,21 @@ const dataController = (function() {
              };
 
          })();
+         // UI controller constant for timer
+         const UIController = (function() {
+
+             let intervalID;
+
+             const DOMstrings = {
+                 projectForm: '.project-form',
+                 inputValue: 'input[type="text"]',
+                 projectList: '.projects',
+                 hoursSpan: '.hours',
+                 minutesSpan: '.minutes',
+                 secondsSpan: '.seconds'
+             };
+
+             // Create variables from DOMstrings
+             const {projectForm, inputValue, projectList, hoursSpan, minutesSpan, secondsSpan} = DOMstrings;
+
+             return {
