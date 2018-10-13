@@ -74,3 +74,33 @@ const dataController = (function() {
              const {projectForm, inputValue, projectList, hoursSpan, minutesSpan, secondsSpan} = DOMstrings;
 
              return {
+
+               // Get input value
+                getInput: function() {
+                    return document.querySelector(inputValue);
+                },
+
+                addProjectToUI: function(obj) {
+
+                    // Create markup
+                    const html = `
+                    <li id="project-${obj.id}">
+                        <h2>${obj.title}</h2>
+                        <div class="timer">
+                            <p class="timer-label">Total Time Spent</p>
+                            <p class="timer-text"><span class="hours">00</span>:<span class="minutes">00</span>:<span class="seconds">00</span></p>
+                        </div>
+                        <button class="btn start">Start</button>
+                        <button class="delete-btn"><i class="fa fa-times"></i></button>
+                    </li>
+                    `;
+
+                    // Insert the HTML into the DOM
+                    document.querySelector(projectList).insertAdjacentHTML('beforeend', html);
+
+                },
+
+                clearField: function() {
+                    const input = document.querySelector(inputValue);
+                    input.value = '';
+                },
