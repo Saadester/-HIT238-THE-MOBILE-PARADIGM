@@ -228,3 +228,43 @@ const dataController = (function() {
                             }
 
                         };
+
+                            // Specefic functons for timer
+                            const timer = function(event) {
+
+                                const target = event.target;
+
+                                target.classList.toggle('stop');
+
+                                // If the button's text is start and stop
+                                if (target.textContent === 'Start') {
+
+                                    target.textContent = 'Stop';
+                                    UICtrl.startTimer(event);
+
+                                } else if (target.textContent === 'Stop') {
+
+                                    target.textContent = 'Start';
+                                    UICtrl.stopTimer(event);
+
+                                }
+
+                            };
+
+                            // Edit
+                            const editTitle = function(event) {
+                                UICtrl.edit(event);
+                            };
+
+                            // Save
+                            const saveTitle = function(event) {
+
+                                const ID = parseInt(event.target.parentNode.id.slice(8));
+
+                                // Update the task title in the UI
+                                const newTitle = UICtrl.save(event);
+
+                                // Update the task title in the data structure
+                                dataCtrl.updateTitle(newTitle, ID);
+
+                            };
