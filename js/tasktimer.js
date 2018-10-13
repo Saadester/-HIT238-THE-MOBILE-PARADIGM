@@ -1,12 +1,11 @@
 const dataController = (function() {
 
- class Project {
- constructor(id, title) {
- this.id = id;
- this.title = title;
- }
- }
-
+    class Project {
+        constructor(id, title) {
+            this.id = id;
+            this.title = title;
+        }
+    }
  const projects = {
  allProjects: []
  };
