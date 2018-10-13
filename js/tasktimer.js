@@ -159,3 +159,28 @@ const dataController = (function() {
                             const projectToDelete = document.getElementById(projectID);
                             projectToDelete.parentNode.removeChild(projectToDelete);
                         },
+                        // Make the DOMstrings public
+                        getDOMstrings: function() {
+                            return DOMstrings;
+                        }
+
+                    };
+
+                })();
+
+                // Global app controller
+                const controller = (function(dataCtrl, UICtrl) {
+
+                    const setupEventListeners = function() {
+
+                        const DOM = UICtrl.getDOMstrings();
+
+                        // When the form is submitted
+                        const form = document.querySelector(DOM.projectForm);
+                        form.addEventListener('submit', ctrlAddProject);
+
+                        const projects = document.querySelector(DOM.projectList);
+
+                        projects.addEventListener('click', function(event) {
+
+                            const target = event.target;
