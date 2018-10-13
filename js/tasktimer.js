@@ -268,3 +268,31 @@ const dataController = (function() {
                                 dataCtrl.updateTitle(newTitle, ID);
 
                             };
+                            // Delete tasks from UI and data Controller
+                            const deleteProject = function(event) {
+                                const target = event.target;
+                                const projectID = target.parentNode.id;
+                                const ID = parseInt(target.parentNode.id.slice(8));
+
+                                if (projectID) {
+
+                                    dataCtrl.deleteData(ID);
+
+                                    UICtrl.delete(projectID);
+
+                                }
+                            };
+
+                            return {
+
+                                // Initialization
+                                init: function() {
+                                    console.log('Application has started');
+                                    setupEventListeners();
+                                }
+
+                            };
+
+                        })(dataController, UIController);
+                        
+                        controller.init();
