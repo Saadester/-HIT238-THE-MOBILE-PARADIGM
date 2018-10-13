@@ -184,3 +184,28 @@ const dataController = (function() {
                         projects.addEventListener('click', function(event) {
 
                             const target = event.target;
+                            // When the start button is clicked
+                            if (target.className === 'btn start' || target.className === 'btn start stop') {
+                                timer(event);
+                            }
+
+                            // When the project title is clicked
+                            if (target.tagName === 'H2') {
+                                editTitle(event);
+                            }
+
+                            // When the delete button is clicked
+                            if (target.className === 'delete-btn') {
+                                deleteProject(event);
+                            }
+
+                        });
+
+                        // When the enter key is pressed
+                        projects.addEventListener('keypress', function(event) {
+                            if (event.keyCode === 13 || event.which === 13) {
+                                saveTitle(event);
+                            }
+                        });
+
+                    };
