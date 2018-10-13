@@ -123,4 +123,39 @@ const dataController = (function() {
                     target.setAttribute('timer-id', intervalID);
 
                 },
-                
+                // Stop the timer
+                        stopTimer: function(event) {
+                            const target = event.target.previousElementSibling.lastElementChild;
+                            clearInterval(target.getAttribute('timer-id'));
+                        },
+
+                        // Update project name in UI
+                        edit: function(event) {
+
+                            const input = document.createElement('input');
+                            const title = event.target;
+                            const parent = title.parentNode;
+                            input.value = title.textContent;
+                            parent.insertBefore(input, title);
+                            parent.removeChild(title);
+
+                        },
+
+                        // Save the project title in UI
+                        save: function(event) {
+
+                            const title = document.createElement('h2');
+                            const input = event.target;
+                            const parent = input.parentNode;
+                            title.textContent = input.value;
+                            parent.insertBefore(title, input);
+                            parent.removeChild(input);
+                            return title.textContent;
+
+                        },
+
+                        // Delete the project in the UI
+                        delete: function(projectID) {
+                            const projectToDelete = document.getElementById(projectID);
+                            projectToDelete.parentNode.removeChild(projectToDelete);
+                        },
