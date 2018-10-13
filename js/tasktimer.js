@@ -159,7 +159,7 @@ document.querySelector(projectList).insertAdjacentHTML('beforeend', html);
  }
 
  };
-
+ 
  })();
 
  // Global app controller

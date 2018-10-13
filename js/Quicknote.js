@@ -130,7 +130,6 @@ function delNoteBtns(){
     }, false);
   }
 }
-
 // function to insert text into a textarea
 function typeInTextarea(el, newText) {
 
