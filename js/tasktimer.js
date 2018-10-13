@@ -104,3 +104,23 @@ const dataController = (function() {
                     const input = document.querySelector(inputValue);
                     input.value = '';
                 },
+                // Start the timer
+                startTimer: function(event) {
+
+                    const target = event.target.previousElementSibling.lastElementChild;
+                    const seconds = target.querySelector(secondsSpan);
+                    const minutes = target.querySelector(minutesSpan);
+                    const hours = target.querySelector(hoursSpan);
+
+                    let sec = 0;
+                    intervalID = setInterval(function() {
+                        sec++;
+                        seconds.textContent = (`0${sec % 60}`).substr(-2);
+                        minutes.textContent = (`0${(parseInt(sec / 60)) % 60}`).substr(-2);
+                        hours.textContent = (`0${parseInt(sec / 3600)}`).substr(-2);
+                    }, 1000);
+
+                    target.setAttribute('timer-id', intervalID);
+
+                },
+                
